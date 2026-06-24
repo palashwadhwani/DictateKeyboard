@@ -17,6 +17,9 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Fetch missing libraries
+        run: bash scripts/fetch-sherpa-onnx.sh
+
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
